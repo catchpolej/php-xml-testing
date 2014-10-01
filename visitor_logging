@@ -1,0 +1,35 @@
+<?php
+    $xml = new DOMDocument("1.0");
+	$root = $xml->createElement("data");
+	$xml->appendChild($root);
+
+	$id   = $xml->createElement("id");
+	$idText = $xml->createTextNode('1');
+	$id->appendChild($idText);
+
+	$vname   = $xml->createElement("vname");
+	//$vnameText = $xml->createTextNode(htmlspecialchars($_POST['name']));
+	$vnameText = $xml->createTextNode('Name_text');
+	$vanem->appendChild($vnameText);
+	
+	$visitor = $xml->createElement("visitor");
+	$visitor->appendChild($id);
+	$visitor->appendChild($vname);
+
+    $root->appendChild( $visitor );
+	$xml->formatOutput = true;
+    $xml->save('visitor_list.xml');
+?>
+
+<html>
+ <head>
+  <title>PHP visitor 2 form action</title>
+ </head>
+ <body>
+
+ Hi <?php echo htmlspecialchars($_POST['name']); ?>
+You are <?php echo (int)$_POST['age']; ?> years old.
+
+</P>
+ </body>
+</html> 
