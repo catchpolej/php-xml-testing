@@ -1,0 +1,23 @@
+<html>
+ <head>
+  <title>PHP Visitor Login Create</title>
+ </head>
+ <body>
+
+ PHP Visitor Recording
+<form action="visitor_logging" method="post">
+ <p>Your name: <input type="text" name="name" /></p>
+ <p>Your age: <input type="text" name="age" /></p>
+ <p><input type="submit" /></p>
+</form>
+
+
+<P>
+<?php
+echo "<BR>";
+echo "This PHP submit action script should write your name to visitor_list.xml"
+?>
+</P>
+
+ </body>
+</html> 
